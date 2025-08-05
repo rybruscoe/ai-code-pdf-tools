@@ -15,8 +15,8 @@ A comprehensive toolkit for integrating PDF documents into VS Code workflows, ma
 ### Quick Setup
 ```bash
 # Clone the repository
-git clone git@github.com:rybruscoe/kilo-code-pdf-tools.git
-cd kilo-code-pdf-tools
+git clone git@github.com:rybruscoe/ai-code-pdf-tools.git
+cd ai-code-pdf-tools
 
 # Run the setup script
 ./scripts/install-pdf-tools.sh
@@ -29,7 +29,7 @@ code --install-extension mathematic.vscode-pdf
 ### As Git Submodule
 ```bash
 # Add as submodule to your project
-git submodule add git@github.com:rybruscoe/kilo-code-pdf-tools.git pdf-tools
+git submodule add git@github.com:rybruscoe/ai-code-pdf-tools.git pdf-tools
 
 # Initialize and update
 git submodule update --init --recursive

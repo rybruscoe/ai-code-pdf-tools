@@ -7,8 +7,8 @@ Thank you for your interest in contributing to PDF Tools! This document provides
 1. **Fork the repository** on GitHub
 2. **Clone your fork** locally:
    ```bash
-   git clone https://github.com/your-username/kilo-code-pdf-tools.git
-   cd kilo-code-pdf-tools
+   git clone https://github.com/your-username/ai-code-pdf-tools.git
+   cd ai-code-pdf-tools
    ```
 3. **Create a feature branch**:
    ```bash
