@@ -1,0 +1,192 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "PDF Summary",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "${workspaceFolder}/tools/pdf_summary.py",
+        "${input:pdfFile}"
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": [],
+      "detail": "Generate a summary of a PDF file"
+    },
+    {
+      "label": "Validate Links",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "${workspaceFolder}/tools/validate_links.py",
+        "${input:documentPath}"
+      ],
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": [],
+      "detail": "Validate links in documentation files"
+    },
+    {
+      "label": "Generate Documentation Index",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "${workspaceFolder}/tools/generate_doc_index.py",
+        "${input:docsDirectory}"
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": [],
+      "detail": "Generate an index of documentation files"
+    },
+    {
+      "label": "Convert PDF to Text",
+      "type": "shell",
+      "command": "pdftotext",
+      "args": [
+        "${input:pdfFile}",
+        "${input:pdfFile}.txt"
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": [],
+      "detail": "Convert PDF to plain text using pdftotext"
+    },
+    {
+      "label": "Convert PDF to Markdown",
+      "type": "shell",
+      "command": "pandoc",
+      "args": [
+        "${input:pdfFile}",
+        "-o",
+        "${input:pdfFile}.md",
+        "--from=pdf",
+        "--to=markdown",
+        "--wrap=none"
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": [],
+      "detail": "Convert PDF to Markdown using pandoc"
+    },
+    {
+      "label": "Search PDF Content",
+      "type": "shell",
+      "command": "pdfgrep",
+      "args": [
+        "-i",
+        "-n",
+        "${input:searchTerm}",
+        "${input:pdfFile}"
+      ],
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": [],
+      "detail": "Search for text within PDF files using pdfgrep"
+    },
+    {
+      "label": "PDF Info",
+      "type": "shell",
+      "command": "pdfinfo",
+      "args": [
+        "${input:pdfFile}"
+      ],
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": [],
+      "detail": "Display PDF metadata and information"
+    },
+    {
+      "label": "Install PDF Tools",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "${workspaceFolder}/scripts/install-pdf-tools.sh"
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": [],
+      "detail": "Install all PDF processing tools and dependencies"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "pdfFile",
+      "description": "Path to PDF file",
+      "type": "promptString"
+    },
+    {
+      "id": "documentPath",
+      "description": "Path to document or directory",
+      "type": "promptString"
+    },
+    {
+      "id": "docsDirectory",
+      "description": "Path to documentation directory",
+      "type": "promptString",
+      "default": "docs"
+    },
+    {
+      "id": "searchTerm",
+      "description": "Search term for PDF content",
+      "type": "promptString"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "recommendations": [
+    // PDF Viewing and Integration
+    "tomoki1207.pdf",
+    "mathematic.vscode-pdf",
+    "analytic-signal.preview-pdf",
+    
+    // Enhanced Markdown with PDF linking
+    "yzhang.markdown-all-in-one",
+    "shd101wyy.markdown-preview-enhanced",
+    "bierner.markdown-mermaid",
+    "bierner.markdown-preview-github-styles",
+    
+    // File Management and Navigation
+    "alefragnani.bookmarks",
+    "gruntfuggly.todo-tree",
+    "ms-vscode.vscode-json",
+    
+    // Documentation Tools
+    "streetsidesoftware.code-spell-checker",
+    "davidanson.vscode-markdownlint",
+    "redhat.vscode-yaml",
+    
+    // Git Integration
+    "eamodio.gitlens",
+    "mhutchie.git-graph",
+    
+    // General Productivity
+    "ms-vscode-remote.remote-containers",
+    "ms-vscode-remote.remote-ssh",
+    "ms-vscode.remote-explorer"
+  ]
+}

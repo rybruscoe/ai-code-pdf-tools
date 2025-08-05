@@ -1,0 +1,109 @@
+{
+  // PDF Integration Settings
+  "pdf.enableSyncTeX": true,
+  "pdf.enableAutoReload": true,
+  "pdf.enableScrollSync": true,
+  "pdf.defaultZoomLevel": "page-fit",
+  
+  // Markdown Settings for PDF Integration
+  "markdown.preview.breaks": true,
+  "markdown.preview.linkify": true,
+  "markdown.preview.typographer": true,
+  "markdown.extension.toc.levels": "1..6",
+  "markdown.extension.toc.orderedList": false,
+  "markdown.extension.toc.plaintext": false,
+  "markdown.extension.toc.updateOnSave": true,
+  
+  // File Association for PDF Tools
+  "files.associations": {
+    "*.pdf": "pdf",
+    "*.md": "markdown"
+  },
+  
+  // Search Settings for PDF Content
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/tmp": true,
+    "**/temp": true
+  },
+  
+  // File Explorer Settings
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.sortOrder": "type",
+  
+  // Editor Settings for Documentation
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 100,
+  "editor.rulers": [80, 100],
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "editor.trimAutoWhitespace": true,
+  "editor.formatOnSave": true,
+  
+  // Terminal Settings for PDF Tools
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.defaultProfile.osx": "bash",
+  "terminal.integrated.scrollback": 10000,
+  
+  // Git Settings
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  
+  // Spell Checker Settings
+  "cSpell.words": [
+    "poppler",
+    "pdfgrep",
+    "pandoc",
+    "pdftotext",
+    "pdfinfo",
+    "pdftk",
+    "ghostscript",
+    "imagemagick",
+    "tesseract"
+  ],
+  
+  // Language Specific Settings
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  },
+  
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  
+  // Workspace Trust Settings
+  "security.workspace.trust.untrustedFiles": "open",
+  "security.workspace.trust.banner": "never",
+  "security.workspace.trust.startupPrompt": "never",
+  
+  // Performance Settings
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.hg/store/**": true
+  }
+}
