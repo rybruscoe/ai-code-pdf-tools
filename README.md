@@ -101,11 +101,11 @@ Required system packages (installed automatically):
 
 ## 📚 Documentation
 
-- [Installation Guide](docs/INSTALLATION.md) - Detailed setup instructions
-- [Usage Examples](docs/USAGE.md) - Common workflows and examples
-- [VS Code Integration](docs/VSCODE.md) - Complete VS Code setup guide
-- [API Reference](docs/API.md) - Tool APIs and configuration options
-- [Troubleshooting](docs/TROUBLESHOOTING.md) - Common issues and solutions
+- [PDF Integration Guide](PDF_INTEGRATION.md) - Complete setup and usage guide
+- [Installation Scripts](scripts/) - Automated setup tools
+- [VS Code Configuration](vscode/) - Extensions, settings, and tasks
+- [Tool Documentation](#-tools) - Available tools and their usage
+- [Contributing Guidelines](CONTRIBUTING.md) - How to contribute to this project
 
 ## 🤝 Contributing
 
